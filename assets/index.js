@@ -35,7 +35,7 @@ const data = [
 
 const nextTag = document.querySelector('footer img.next');
 const prevTag = document.querySelector('footer img.prev');
-const randTag = document.querySelector('footer img.random');
+const randTag = document.querySelector('footer img.rand');
 const outputTag = document.querySelector('h2');
 const circleTag = document.querySelector('div.circle');
 const bodyTag = document.querySelector('body');
@@ -89,16 +89,16 @@ nextTag.addEventListener('click', () => {
 	next();
 });
 
-document.addEventListener('keyup', function (event) {
-	console.log(event);
+document.addEventListener('keyup', (e) => {
+	console.log(e);
 
 	// if the key being pressed is ArrowRight
-	if (event.key == 'ArrowRight') {
+	if (e.key === 'ArrowRight') {
 		next();
 	}
 
 	// if the key being pressed is ArrowLeft
-	if (event.key == 'ArrowLeft') {
+	if (e.key === 'ArrowLeft') {
 		prev();
 	}
 });
